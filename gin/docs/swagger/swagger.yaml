@@ -1,0 +1,70 @@
+definitions:
+  model.Announcement:
+    properties:
+      content:
+        type: string
+      create_time:
+        type: integer
+      expired_time:
+        type: integer
+      id:
+        type: integer
+      title:
+        type: string
+      update_time:
+        type: integer
+      url:
+        type: string
+    type: object
+info:
+  contact: {}
+  description: howie
+  license:
+    name: Howie
+    url: https://github.com/hwholiday/test
+  termsOfService: https://github.com/hwholiday/test
+  title: Golang Gin API
+  version: "1.0"
+paths:
+  /v1/announcement/{id}:
+    delete:
+      parameters:
+      - {}
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: Internal Server Error
+          schema:
+            type: string
+      summary: 删除公告
+      tags:
+      - announcement
+    get:
+      consumes:
+      - application/json
+      description: 通过ID获取公告信息
+      parameters:
+      - description: Announcement ID
+        in: path
+        name: id
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: Internal Server Error
+          schema:
+            type: string
+      summary: 获取公告
+      tags:
+      - announcement
+swagger: "2.0"

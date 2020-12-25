@@ -1,0 +1,7 @@
+{
+  "mysqluser":"root",
+  "mysqlpass":"nihao123,./",
+  "mysqlurl":"192.168.2.15",
+  "mysqlport":"3306",
+  "mysqldb":"online"
+}
