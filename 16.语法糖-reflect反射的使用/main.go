@@ -15,20 +15,23 @@ func (person Person) Do()string {
 	return "调用该方法2"
 }
 
+
+// TypeOf求类型
+// ValueOf求值
 func main() {
 	var i = 1
 	var ii = "11"
 	var iii = []string{"1", "2", "3"}
 	var person Person
-	fmt.Println(reflect.TypeOf(i))
-	fmt.Println(reflect.TypeOf(ii))
-	fmt.Println(reflect.TypeOf(iii))
-	fmt.Println(reflect.TypeOf(person))
-	fmt.Println(reflect.TypeOf(person).Name())
+	fmt.Println(reflect.TypeOf(i))				// int
+	fmt.Println(reflect.TypeOf(ii))				// string
+	fmt.Println(reflect.TypeOf(iii))			// []string
+	fmt.Println(reflect.TypeOf(person))			// main.Person
+	fmt.Println(reflect.TypeOf(person).Name())	// Person
 	hh := reflect.TypeOf(person)
 	for i := 0; i < hh.NumField(); i++ {
-		fmt.Println(hh.Field(i).Name)
-		fmt.Println(hh.Field(i).Type)
+		fmt.Println(hh.Field(i).Name) 			// Name Sex
+		fmt.Println(hh.Field(i).Type)			// string int
 	}
 	fmt.Println("hh.Kind()",hh.Kind())
 	fmt.Println("--------------------")
@@ -44,7 +47,7 @@ func main() {
 		fmt.Println(rv.Field(i).Type())
 		fmt.Println(rv.Field(i).Interface())
 	}
- 	//reflect ValueOf 赋值
+ 	//16.语法糖-reflect反射的使用 ValueOf 赋值
 	fv := reflect.ValueOf(i)
 	fe := reflect.ValueOf(&i).Elem()
 	fmt.Println(fv)
@@ -53,7 +56,7 @@ func main() {
 	fe.SetInt(123)
 	fmt.Println(i)
 	fmt.Println(reflect.ValueOf(i).Interface())
-	//reflect ValueOf 调用方法
+	//16.语法糖-reflect反射的使用 ValueOf 调用方法
 	data := reflect.ValueOf(hhh).MethodByName("Do").Call([]reflect.Value{})
 	fmt.Println(data[0].String())
 }
