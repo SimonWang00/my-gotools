@@ -4,7 +4,7 @@ import (
 	"github.com/gin-gonic/gin"
 	"strconv"
 	"time"
-	"learning_tools/gin/model"
+	"gin/model"
 )
 //announcement
 type AnnouncementController struct {

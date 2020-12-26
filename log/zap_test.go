@@ -14,7 +14,7 @@ func TestGetLogger(t *testing.T) {
 		Level:      "debug",
 	})
 	log := GetLogger()
-	for i := 0; i < 20; i++ {
+	for i := 0; i < 3; i++ {
 		time.Sleep(time.Second / 2)
 		log.Info(fmt.Sprint("test log ", i), zap.Int("line", 47))
 		log.Debug(fmt.Sprint("debug log ", i), zap.Any("level", "1231231231"))
