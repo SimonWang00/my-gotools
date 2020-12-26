@@ -33,7 +33,7 @@ func InitJaegerTracer(serviceName string, jaegerHostPort string) (opentracing.Tr
 }
 
 func node2(data map[string]string) {
-	tracer, closer := InitJaegerTracer("jaeger-test", "172.13.3.160:6831")
+	tracer, closer := InitJaegerTracer("14.工具库-在gin中使用jaeger全链路追踪-test", "127.0.0.1:6831")
 	defer closer.Close()
 	spanContext, err := tracer.Extract(opentracing.TextMap, spanTextMap(data))
 	if err != nil {
@@ -55,7 +55,7 @@ func node2(data map[string]string) {
 }
 
 func TestJaegerTest(t *testing.T) {
-	tracer, closer := InitJaegerTracer("jaeger-test", "172.13.3.160:6831")
+	tracer, closer := InitJaegerTracer("14.工具库-在gin中使用jaeger全链路追踪-test", "127.0.0.1:6831")
 	defer closer.Close()
 	span := tracer.StartSpan("span_root")
 	span.SetTag("node", "node1")
