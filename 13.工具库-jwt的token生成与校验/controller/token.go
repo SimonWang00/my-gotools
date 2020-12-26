@@ -63,7 +63,7 @@ func (tokenController *TokenController) CreateTokenByRsa(w http.ResponseWriter, 
 	claims["name"] = "SimonWang00"
 	claims["now"] = time.Now().Unix()
 	token.Claims = claims
-	signBytes, err := ioutil.ReadFile("./jwt/conf/rsa_private_key.pem")
+	signBytes, err := ioutil.ReadFile("./13.工具库-jwt的token生成与校验/conf/rsa_private_key.pem")
 	if err != nil {
 		w.Write([]byte(err.Error()))
 		return
@@ -92,7 +92,7 @@ func (tokenController *TokenController) TestRsaToken(w http.ResponseWriter, r *h
 		} else {
 			fmt.Println("没有使用相同的加密")
 		}
-		signBytes, err := ioutil.ReadFile("./jwt/conf/rsa_public_key.pem")
+		signBytes, err := ioutil.ReadFile("./13.工具库-jwt的token生成与校验/conf/rsa_public_key.pem")
 		if err != nil {
 			return nil, err
 		}
