@@ -1,11 +1,11 @@
 package main
 
 import (
-	"github.com/PuerkitoBio/goquery"
-	"net/http"
-	"log"
-	"strings"
 	"fmt"
+	"github.com/PuerkitoBio/goquery"
+	"log"
+	"net/http"
+	"strings"
 )
 
 type Account struct {

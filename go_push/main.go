@@ -1,8 +1,8 @@
 package main
 
 import (
-	"learning_tools/go_push/gateway"
-	"learning_tools/go_push/logic"
+	"my-gotools/go_push/gateway"
+	"my-gotools/go_push/logic"
 	"os"
 	"os/signal"
 	"syscall"
