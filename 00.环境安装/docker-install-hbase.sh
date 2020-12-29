@@ -8,7 +8,11 @@ docker pull harisekhon/hbase:1.3
 docker images
 
 # 4. 运行容器
-docker run -d -h myhbase -p 2181:2181 -p 8080:8080 -p 8085:8085 -p 9090:9090 -p 9095:9095 -p 16000:16000 -p 16010:16010 -p 16201:16201 -p 16301:16301 --name hbase1.3 harisekhon/hbase:1.3
+docker run -d -h myhbase -p 2181:2181 -p 8080:8080 -p 8085:8085 -p 9090:9090 -p 9095:9095 -p 16000:16000 -p 16010:16010 -p 16200:16200 -p 16300:16300 --name hbase1.3 harisekhon/hbase:1.3
+
+# 5. 配置hosts
+# 在你安装docker的主机上配置
+172.17.0.3      myhbase
 
 # 5. 安装成功
 访问 http://127.0.0.1:16010/master-status
