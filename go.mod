@@ -6,6 +6,7 @@ require (
 	cloud.google.com/go/firestore v1.4.0 // indirect
 	firebase.google.com/go v3.13.0+incompatible
 	github.com/PuerkitoBio/goquery v1.6.0
+	github.com/RedisBloom/redisbloom-go v0.9.1
 	github.com/Shopify/sarama v1.27.2
 	github.com/afex/hystrix-go v0.0.0-20180502004556-fa1af6a1f4f5
 	github.com/cihub/seelog v0.0.0-20170130134532-f561c5e57575
