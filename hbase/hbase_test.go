@@ -30,7 +30,7 @@ func reverse(str string) string {
 }
 
 func TestMain(m *testing.M) {
-	client = gohbase.NewClient("172.13.3.160")
+	client = gohbase.NewClient("127.0.0.1")
 	os.Exit(m.Run())
 }
 

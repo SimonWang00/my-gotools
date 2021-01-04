@@ -22,4 +22,4 @@ create 'user','info'
 
 给 hosts 添加   
 docker-hbase 你的docker地址
-
+172.17.0.3      myhbase
