@@ -1,8 +1,8 @@
 package main
 
 import (
-	"learning_tools/interface/src"
 	"fmt"
+	"my-gotools/interface/src"
 )
 
 type AA struct {

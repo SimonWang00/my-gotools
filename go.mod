@@ -22,10 +22,11 @@ require (
 	github.com/go-sqlite/sqlite3 v0.0.0-20180313105335-53dd8e640ee7 // indirect
 	github.com/go-xorm/xorm v0.7.9
 	github.com/golang/protobuf v1.4.3
+	github.com/gomodule/redigo v1.8.2
 	github.com/gonuts/binary v0.2.0 // indirect
 	github.com/google/uuid v1.1.2
 	github.com/google/wire v0.4.0
-	github.com/gorilla/websocket v1.4.1
+	github.com/gorilla/websocket v1.4.2
 	github.com/grpc-ecosystem/go-grpc-middleware v1.2.2
 	github.com/hpcloud/tail v1.0.0
 	github.com/jinzhu/gorm v1.9.16 // indirect
@@ -49,6 +50,7 @@ require (
 	github.com/satori/go.uuid v1.2.0
 	github.com/shopspring/decimal v1.2.0
 	github.com/smartystreets/goconvey v1.6.4
+	github.com/spf13/viper v1.7.1
 	github.com/swaggo/gin-swagger v1.3.0
 	github.com/swaggo/swag v1.5.1
 	github.com/tsuna/gohbase v0.0.0-20201125011725-348991136365

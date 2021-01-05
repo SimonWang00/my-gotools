@@ -11,6 +11,7 @@ import (
 	"time"
 )
 
+// Options 日志配置
 type Options struct {
 	LogFileDir string
 	AppName    string
@@ -21,9 +22,9 @@ type Options struct {
 }
 
 var (
-	l              *Logger
+	l *Logger
+	outWrite zapcore.WriteSyncer       // IO输出
 	sp             = string(filepath.Separator)
-	outWrite       zapcore.WriteSyncer       // IO输出
 	debugConsoleWS = zapcore.Lock(os.Stdout) // 控制台标准输出
 )
 
@@ -71,6 +72,8 @@ func (l *Logger) init() {
 	}
 	defer l.Logger.Sync()
 }
+
+
 func (l *Logger) GetLevel() (level zapcore.Level) {
 	switch strings.ToLower(l.Opts.Level) {
 	case "debug":
@@ -155,6 +158,7 @@ func (l *Logger) cores() zap.Option {
 		return zapcore.NewTee(cores...)
 	})
 }
+
 func timeEncoder(t time.Time, enc zapcore.PrimitiveArrayEncoder) {
 	enc.AppendString(t.Format("2006-01-02 15:04:05"))
 }

@@ -1,12 +1,12 @@
 package router
 
 import (
-	"github.com/gin-gonic/gin"
-	"gin/controller"
 	"github.com/gin-contrib/cors"
-	_"gin/docs"
+	"github.com/gin-gonic/gin"
 	"github.com/swaggo/gin-swagger"
 	"github.com/swaggo/gin-swagger/swaggerFiles"
+	"my-gotools/gin/controller"
+	_ "my-gotools/gin/docs"
 )
 
 func SetRouters(r *gin.Engine) {

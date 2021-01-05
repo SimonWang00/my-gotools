@@ -2,12 +2,14 @@ package gcache
 
 import "sync"
 
+// cache 缓存类
 type cache struct {
 	mu            sync.Mutex
 	lru           *LRU
 	maxCacheBytes int64
 }
 
+//
 func (c *cache) add(key string, val []byte) {
 	c.mu.Lock()
 	defer c.mu.Unlock()

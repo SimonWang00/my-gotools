@@ -2,9 +2,9 @@ package controller
 
 import (
 	"github.com/gin-gonic/gin"
+	"my-gotools/gin/model"
 	"strconv"
 	"time"
-	"gin/model"
 )
 //announcement
 type AnnouncementController struct {
