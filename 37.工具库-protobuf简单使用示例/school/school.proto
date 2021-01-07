@@ -1,0 +1,27 @@
+//指定版本
+//注意proto3与proto2的写法有些不同
+syntax = "proto3";
+
+//包名，通过protoc生成时go文件时
+package school;
+
+//性别
+//枚举类型第一个字段必须为0
+enum Sex {
+    male = 0;
+    female = 1;
+    other =2;
+}
+
+//学生
+message Student {
+    Sex sex = 1;
+    string Name = 2;
+    int32 Age =3;
+}
+
+//班级
+message Class{
+    repeated Student Students =1;
+    string Name =2;
+}
