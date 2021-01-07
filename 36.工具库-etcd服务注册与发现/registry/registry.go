@@ -1,4 +1,4 @@
-package registrySelector
+package registry
 
 import (
 	"context"
@@ -38,13 +38,13 @@ type Node struct {
 }
 
 type Options struct {
-	name   string
-	ttl    int64
-	config clientv3.Config
+	Name   string
+	Ttl    int64
+	Config clientv3.Config
 }
 
 func NewRegistry(options Options) (Registry, error) {
-	cli, err := clientv3.New(options.config)
+	cli, err := clientv3.New(options.Config)
 	if err != nil {
 		return nil, err
 	}
@@ -60,9 +60,11 @@ func (s *registryServer) RegistryNode(put PutNode) error {
 	if s.isRegistry {
 		return errors.New("only one node can be registered")
 	}
-	ctx, cancel := context.WithTimeout(context.Background(), time.Duration(s.options.ttl)*time.Second)
+	ctx, cancel := context.WithTimeout(context.Background(), time.Duration(s.options.Ttl)*time.Second)
 	defer cancel()
-	grant, err := s.cli.Grant(context.Background(), s.options.ttl)
+	// 创建租约时间ttl
+	grant, err := s.cli.Grant(context.Background(), s.options.Ttl)
+	fmt.Println("grant:",grant)
 	if err != nil {
 		return err
 	}
@@ -74,6 +76,7 @@ func (s *registryServer) RegistryNode(put PutNode) error {
 	if err != nil {
 		return err
 	}
+	// 新增加key
 	_, err = s.cli.Put(ctx, s.GetKey(node), nodeVal, clientv3.WithLease(grant.ID))
 	if err != nil {
 		return err
@@ -88,6 +91,7 @@ func (s *registryServer) UnRegistry() {
 	s.stop <- true
 }
 
+// 撤销租约
 func (s *registryServer) Revoke() error {
 	_, err := s.cli.Revoke(context.TODO(), s.leaseID)
 	if err != nil {
@@ -97,6 +101,7 @@ func (s *registryServer) Revoke() error {
 	return err
 }
 
+// 保持续租的逻辑
 func (s *registryServer) KeepAlive() error {
 	keepAliveCh, err := s.cli.KeepAlive(context.TODO(), s.leaseID)
 	if err != nil {
@@ -117,8 +122,11 @@ func (s *registryServer) KeepAlive() error {
 	}
 }
 
+
 func (s *registryServer) GetKey(node Node) string {
-	return fmt.Sprintf("%s%s/%d", prefix, s.options.name, s.HashKey(node.Addr))
+	key := fmt.Sprintf("%s%s/%d", prefix, s.options.Name, s.HashKey(node.Addr))
+	fmt.Println(key)
+	return key
 }
 
 func (s *registryServer) GetVal(node Node) (string, error) {
@@ -127,5 +135,7 @@ func (s *registryServer) GetVal(node Node) (string, error) {
 }
 
 func (e *registryServer) HashKey(addr string) uint32 {
-	return crc32.ChecksumIEEE([]byte(addr))
+	hid := crc32.ChecksumIEEE([]byte(addr))
+	fmt.Println("crc32.ChecksumIEEE([]byte(addr)):",crc32.ChecksumIEEE([]byte(addr)))
+	return hid
 }
