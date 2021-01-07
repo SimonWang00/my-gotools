@@ -1,18 +1,18 @@
 package apple_pushkit
 
 import (
-	"crypto/tls"
-	"fmt"
-	"net"
-	"encoding/hex"
-	"encoding/binary"
-	"io/ioutil"
-	"golang.org/x/crypto/pkcs12"
-	"time"
 	"bytes"
+	"crypto/tls"
 	"crypto/x509"
+	"encoding/binary"
+	"encoding/hex"
 	"errors"
+	"fmt"
+	"golang.org/x/crypto/pkcs12"
+	"io/ioutil"
+	"net"
 	"strings"
+	"time"
 )
 
 var (
@@ -32,6 +32,7 @@ type PushKit struct {
 	hostUrl    string
 	isDebug    bool
 }
+
 
 func InitPushKit(filename, pwd string, isDebug bool) (*PushKit, error) {
 	var (
@@ -54,6 +55,7 @@ func InitPushKit(filename, pwd string, isDebug bool) (*PushKit, error) {
 	}
 	return pushkit, nil
 }
+
 
 func (p *PushKit) Push(token string, data []byte) error {
 	conf := &tls.Config{

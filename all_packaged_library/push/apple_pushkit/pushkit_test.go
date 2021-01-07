@@ -1,8 +1,8 @@
 package apple_pushkit
 
 import (
-	"testing"
 	"fmt"
+	"testing"
 )
 
 func TestInitPushKit(t *testing.T) {
