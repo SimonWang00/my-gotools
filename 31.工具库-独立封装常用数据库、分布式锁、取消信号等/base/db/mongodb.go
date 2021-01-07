@@ -4,8 +4,8 @@ import (
 	"context"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
-	"my-gotools/all_packaged_library/base/config"
-	"my-gotools/all_packaged_library/base/tool"
+	"my-gotools/31.工具库-独立封装常用数据库、分布式锁、取消信号等/base/config"
+	"my-gotools/31.工具库-独立封装常用数据库、分布式锁、取消信号等/base/tool"
 	"time"
 )
 
@@ -13,7 +13,7 @@ func initMongoDb() {
 	//链接mongo服务
 	opt := options.Client().ApplyURI(config.GetMgoConfig().GetUrl())
 	opt.SetLocalThreshold(3 * time.Second) //只使用与mongo操作耗时小于3秒的
-	if config.GetMgoConfig().GetName()!=""&&config.GetMgoConfig().GetPass()!=""{
+	if config.GetMgoConfig().GetName()!=""&& config.GetMgoConfig().GetPass()!=""{
 		opt.SetAuth(options.Credential{
 			Username: config.GetMgoConfig().GetName(),
 			Password: config.GetMgoConfig().GetPass(),

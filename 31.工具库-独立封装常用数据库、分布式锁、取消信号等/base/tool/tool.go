@@ -1,7 +1,7 @@
 package tool
 
 import (
-	"my-gotools/all_packaged_library/base/config"
+	"my-gotools/31.工具库-独立封装常用数据库、分布式锁、取消信号等/base/config"
 	"sync"
 )
 

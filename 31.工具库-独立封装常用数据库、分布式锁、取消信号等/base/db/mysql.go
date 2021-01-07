@@ -5,8 +5,8 @@ import (
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/go-xorm/xorm"
 	"go.uber.org/zap"
-	"my-gotools/all_packaged_library/base/config"
-	"my-gotools/all_packaged_library/base/tool"
+	"my-gotools/31.工具库-独立封装常用数据库、分布式锁、取消信号等/base/config"
+	"my-gotools/31.工具库-独立封装常用数据库、分布式锁、取消信号等/base/tool"
 	"os"
 )
 

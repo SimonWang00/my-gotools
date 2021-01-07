@@ -1,9 +1,9 @@
 package base
 
 import (
-	"my-gotools/all_packaged_library/base/config"
-	"my-gotools/all_packaged_library/base/db"
-	"my-gotools/all_packaged_library/base/tool"
+	"my-gotools/31.工具库-独立封装常用数据库、分布式锁、取消信号等/base/config"
+	"my-gotools/31.工具库-独立封装常用数据库、分布式锁、取消信号等/base/db"
+	"my-gotools/31.工具库-独立封装常用数据库、分布式锁、取消信号等/base/tool"
 )
 
 //配置文件的目录
