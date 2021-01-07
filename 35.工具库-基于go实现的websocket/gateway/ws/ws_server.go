@@ -3,8 +3,8 @@ package ws
 import (
 	"fmt"
 	"github.com/gorilla/websocket"
-	"my-gotools/websocket/gateway/msg"
-	"my-gotools/websocket/pb"
+	"my-gotools/35.工具库-基于go实现的websocket/gateway/msg"
+	"my-gotools/35.工具库-基于go实现的websocket/pb"
 	"net"
 	"net/http"
 	"strings"

@@ -1,7 +1,7 @@
 package main
 
 import (
-	"my-gotools/websocket/gateway/ws"
+	"my-gotools/35.工具库-基于go实现的websocket/gateway/ws"
 )
 
 func main() {
