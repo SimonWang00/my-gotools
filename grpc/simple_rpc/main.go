@@ -1,12 +1,12 @@
 package main
 
 import (
-	"net"
-	pr 	"my-gotools/grpc/simple_rpc/proto"
-	"log"
-	"google.golang.org/grpc"
-	"golang.org/x/net/context"
 	"fmt"
+	"golang.org/x/net/context"
+	"google.golang.org/grpc"
+	"log"
+	pr "my-gotools/grpc/simple_rpc/proto"
+	"net"
 )
 
 type Server struct{}
@@ -14,8 +14,6 @@ type Server struct{}
 func (s *Server)LoL(ctx context.Context,up *pr.HowieUp)(do *pr.HowieDown,err error) {
 	do=&pr.HowieDown{Msg:up.Name+"1111"}
 	return do,nil
-
-
 }
 
 

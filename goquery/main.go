@@ -54,7 +54,6 @@ func main() {
 			account.CPUWeight=v
 			accounts=append(accounts,account)
 			break
-
 		}
 	}
 	fmt.Println(accounts)
