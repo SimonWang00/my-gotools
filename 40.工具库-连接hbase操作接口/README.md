@@ -11,15 +11,9 @@ docker run -d -h docker-hbase \
         -p 16301:16301 \
         -p 16020:16020\
         --name hbase \
-        harisekhon/hbase
+        harisekhon/hbase:1.3
 
 docker exec -it hbase /bin/bash
 
 hbase shell
 
-#### info为列簇,不建议有过多列簇
-create 'user','info'
-
-给 hosts 添加   
-docker-hbase 你的docker地址
-172.17.0.3      myhbase
