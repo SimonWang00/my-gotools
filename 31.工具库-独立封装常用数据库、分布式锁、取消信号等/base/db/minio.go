@@ -14,7 +14,7 @@ func initMinio() {
 	if minioClient, err = minio.New(config.GetMinioConfig().GetPath(), config.GetMinioConfig().GetAccessKeyId(), config.GetMinioConfig().GetSecretAccessKey(), secure); err != nil {
 		panic(err)
 	}
-	tool.GetLogger().Debug("minio success : " + config.GetMinioConfig().GetPath())
+	tool.GetLogger().Debug("50.工具库-minio自动生成缩率图服务 success : " + config.GetMinioConfig().GetPath())
 	/*for i:=1;i<=100;i++{
 		var bucketName bytes.Buffer
 		bucketName.WriteString("storage")

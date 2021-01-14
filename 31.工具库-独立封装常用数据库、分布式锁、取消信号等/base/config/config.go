@@ -37,7 +37,7 @@ func Init(path string) {
 	if err = cfg.Section("mongodb").MapTo(&mgoConfig); err != nil {
 		panic(err)
 	}
-	if err = cfg.Section("minio").MapTo(&minioConfig); err != nil {
+	if err = cfg.Section("50.工具库-minio自动生成缩率图服务").MapTo(&minioConfig); err != nil {
 		panic(err)
 	}
 	if cfg, err = ini.Load(filepath.Join(path, "tool.ini")); err != nil {
