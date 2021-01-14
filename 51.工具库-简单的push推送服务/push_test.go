@@ -21,7 +21,7 @@ func Test(t *testing.T)  {
 		}
 		time.Sleep(time.Second)
 		go func(id int) {
-			u := url.URL{Scheme: "ws", Host: "127.0.0.1:8182", Path: "/v1/push", RawQuery: fmt.Sprintf("uid=%d&sign=2&time=%d", id, time.Now().Unix())}
+			u := url.URL{Scheme: "ws", Host: "127.0.0.1:8182", Path: "/v1/51.工具库-简单的push推送服务", RawQuery: fmt.Sprintf("uid=%d&sign=2&time=%d", id, time.Now().Unix())}
 			c, _, err := websocket.DefaultDialer.Dial(u.String(), nil)
 			if err != nil {
 				log.Printf("链接地址%s,失败原因%s", u.String(), err.Error())
