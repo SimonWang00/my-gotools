@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"github.com/go-kit/kit/log"
 	"github.com/go-kit/kit/sd/etcdv3"
-	grpctransport "github.com/go-kit/kit/transport/grpc"
+	grpctransport "github.com/54.工具库-go-kit微服务学习进阶/kit/transport/grpc"
 	"go.uber.org/zap"
 	"golang.org/x/time/rate"
 	"google.golang.org/grpc"

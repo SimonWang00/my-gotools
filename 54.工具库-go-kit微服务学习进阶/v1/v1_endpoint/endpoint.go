@@ -3,7 +3,7 @@ package v1_endpoint
 import (
 	"context"
 	"github.com/go-kit/kit/endpoint"
-	"my-gotools/go-kit/v1/v1_service"
+	"my-gotools/54.工具库-go-kit微服务学习进阶/v1/v1_service"
 )
 
 type EndPointServer struct {

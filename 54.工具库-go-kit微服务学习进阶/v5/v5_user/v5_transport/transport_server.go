@@ -2,7 +2,7 @@ package v5_transport
 
 import (
 	"context"
-	grpctransport "github.com/go-kit/kit/transport/grpc"
+	grpctransport "github.com/54.工具库-go-kit微服务学习进阶/kit/transport/grpc"
 	"go.uber.org/zap"
 	"google.golang.org/grpc/metadata"
 	"learning_tools/go-kit/v5/v5_user/pb"

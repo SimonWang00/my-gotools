@@ -3,7 +3,7 @@ package client
 import (
 	"context"
 	"github.com/go-kit/kit/endpoint"
-	grpctransport "github.com/go-kit/kit/transport/grpc"
+	grpctransport "github.com/54.工具库-go-kit微服务学习进阶/kit/transport/grpc"
 	uuid "github.com/satori/go.uuid"
 	"go.uber.org/zap"
 	"google.golang.org/grpc"

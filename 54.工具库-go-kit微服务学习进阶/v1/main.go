@@ -2,9 +2,9 @@ package main
 
 import (
 	"fmt"
-	"my-gotools/go-kit/v1/v1_endpoint"
-	"my-gotools/go-kit/v1/v1_service"
-	"my-gotools/go-kit/v1/v1_transport"
+	"my-gotools/54.工具库-go-kit微服务学习进阶/v1/v1_endpoint"
+	"my-gotools/54.工具库-go-kit微服务学习进阶/v1/v1_service"
+	"my-gotools/54.工具库-go-kit微服务学习进阶/v1/v1_transport"
 	"net/http"
 )
 

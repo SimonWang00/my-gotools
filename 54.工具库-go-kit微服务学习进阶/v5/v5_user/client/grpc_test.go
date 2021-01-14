@@ -14,7 +14,7 @@ import (
 
 func TestGrpcClient(t *testing.T) {
 	logger := logtool.NewLogger(
-		logtool.SetAppName("go-kit"),
+		logtool.SetAppName("54.工具库-go-kit微服务学习进阶"),
 		logtool.SetDevelopment(true),
 		logtool.SetLevel(zap.DebugLevel),
 	)

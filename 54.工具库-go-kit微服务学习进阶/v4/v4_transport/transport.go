@@ -4,7 +4,7 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
-	httptransport "github.com/go-kit/kit/transport/http"
+	httptransport "github.com/54.工具库-go-kit微服务学习进阶/kit/transport/http"
 	uuid "github.com/satori/go.uuid"
 	"go.uber.org/zap"
 	"learning_tools/go-kit/v4/utils"

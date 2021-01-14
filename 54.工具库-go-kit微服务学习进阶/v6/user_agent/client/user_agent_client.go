@@ -7,7 +7,7 @@ import (
 	"github.com/go-kit/kit/sd"
 	"github.com/go-kit/kit/sd/etcdv3"
 	"github.com/go-kit/kit/sd/lb"
-	grpctransport "github.com/go-kit/kit/transport/grpc"
+	grpctransport "github.com/54.工具库-go-kit微服务学习进阶/kit/transport/grpc"
 	uuid "github.com/satori/go.uuid"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/metadata"
