@@ -9,6 +9,7 @@ require (
 	github.com/RedisBloom/redisbloom-go v0.9.1
 	github.com/Shopify/sarama v1.27.2
 	github.com/afex/hystrix-go v0.0.0-20180502004556-fa1af6a1f4f5
+	github.com/apache/rocketmq-client-go v1.2.4
 	github.com/cihub/seelog v0.0.0-20170130134532-f561c5e57575
 	github.com/dgrijalva/jwt-go v3.2.0+incompatible
 	github.com/fsnotify/fsnotify v1.4.9
@@ -66,8 +67,12 @@ require (
 	golang.org/x/net v0.0.0-20201031054903-ff519b6c9102
 	golang.org/x/time v0.0.0-20201208040808-7e3f01d25324
 	google.golang.org/api v0.36.0
-	google.golang.org/grpc v1.34.0
+	google.golang.org/grpc v1.33.2
+	google.golang.org/protobuf v1.25.0
 	gopkg.in/go-oauth2/redis.v3 v3.2.1
 	gopkg.in/mgo.v2 v2.0.0-20190816093944-a6b53ec6cb22
 	gopkg.in/oauth2.v3 v3.12.0
+	github.com/apache/rocketmq-client-go/v2 v2.1.0-rc5
 )
+
+replace google.golang.org/grpc => google.golang.org/grpc v1.26.0
