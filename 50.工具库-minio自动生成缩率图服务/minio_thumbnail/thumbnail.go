@@ -14,7 +14,7 @@ var minioClient *minio.Client
 
 func StartMinio() {
 	var err error
-	// 初使化 minio client对象。
+	// 初使化 50.工具库-minio自动生成缩率图服务 client对象。
 	minioClient, err = minio.New(endpoint, accessKeyID, secretAccessKey, useSSL)
 	if err != nil {
 		panic(err)

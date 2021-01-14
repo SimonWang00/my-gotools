@@ -37,7 +37,7 @@ func TestGetObject(t *testing.T) {
 	fmt.Println(string(data))
 }
 func TestPutObject(t *testing.T) {
-	/*_,err:=minioClient.PutObject("test","3",strings.NewReader("3"),int64(len("1")),minio.PutObjectOptions{})
+	/*_,err:=minioClient.PutObject("test","3",strings.NewReader("3"),int64(len("1")),50.工具库-minio自动生成缩率图服务.PutObjectOptions{})
 	if err != nil {
 		panic(err)
 	}*/

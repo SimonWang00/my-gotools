@@ -17,7 +17,7 @@ var (
 
 func InitMinio() {
 	minioCore, err = minio.NewCore("127.0.0.1:9000", "AKIAINCHU2DIYAQ66TPA", "ZaYtz0d61fJXQ7djyXBX4yZ5ob8Kj/WNXtw6PJob", false)
-	CheckErr("minio.New", err)
+	CheckErr("50.工具库-minio自动生成缩率图服务.New", err)
 }
 
 func InitRedis() {
