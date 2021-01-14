@@ -2,7 +2,7 @@ package user
 
 import (
 	"fmt"
-	user_agent "micro_agent/proto/user"
+	user_agent "53.工具库-micro微服务实践示例/proto/user"
 	"sync"
 )
 var (

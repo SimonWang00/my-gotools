@@ -11,12 +11,12 @@ import (
 	"micro_agent/base/tool"
 	"micro_agent/handler"
 	"micro_agent/model"
-	user_agent "micro_agent/proto/user"
+	user_agent "53.工具库-micro微服务实践示例/proto/user"
 	"strings"
 	"time"
 )
 
-var conf = flag.String("conf", "/home/ghost/go/src/micro_agent/conf", "conf path")
+var conf = flag.String("conf", "/home/ghost/go/src/53.工具库-micro微服务实践示例/conf", "conf path")
 
 func main() {
 	base.Init(*conf)
