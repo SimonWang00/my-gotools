@@ -1,15 +1,14 @@
-package service_req_hystrix
+package main
 
 import (
 	"errors"
 	"fmt"
 	"github.com/afex/hystrix-go/hystrix"
 	"math/rand"
-	"testing"
 	"time"
 )
 
-func TestHystrix(t *testing.T) {
+func main() {
 	config := hystrix.CommandConfig{
 		Timeout:                2000, //执行command的超时时间
 		MaxConcurrentRequests:  8,    //command的最大并发量
