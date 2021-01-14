@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"github.com/cihub/seelog"
 	"github.com/gin-gonic/gin"
-	"my-gotools/gin/model"
-	"my-gotools/gin/router"
+	"my-gotools/43.工具库-gin常用组件总结/model"
+	"my-gotools/43.工具库-gin常用组件总结/router"
 	"net/http"
 	"os"
 	"os/signal"
@@ -27,12 +27,7 @@ func init() {
 	seelog.ReplaceLogger(logger)
 }
 
-// @title Golang Gin API
-// @version 1.0
-// @description howie
-// @termsOfService https://github.com/hwholiday/test
-// @license.name Howie
-// @license.url https://github.com/hwholiday/test
+
 func main() {
 	gin.SetMode(gin.ReleaseMode)
 	g := gin.Default()

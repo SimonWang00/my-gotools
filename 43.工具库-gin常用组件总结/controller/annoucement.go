@@ -2,7 +2,7 @@ package controller
 
 import (
 	"github.com/gin-gonic/gin"
-	"my-gotools/gin/model"
+	"my-gotools/43.工具库-gin常用组件总结/model"
 	"strconv"
 	"time"
 )

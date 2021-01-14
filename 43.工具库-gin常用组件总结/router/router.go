@@ -5,8 +5,8 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/swaggo/gin-swagger"
 	"github.com/swaggo/gin-swagger/swaggerFiles"
-	"my-gotools/gin/controller"
-	_ "my-gotools/gin/docs"
+	"my-gotools/43.工具库-gin常用组件总结/controller"
+	_ "my-gotools/43.工具库-gin常用组件总结/docs"
 )
 
 func SetRouters(r *gin.Engine) {
