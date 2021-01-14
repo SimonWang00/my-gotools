@@ -1,8 +1,8 @@
 package main
 
 import (
-	"my-gotools/go_push/gateway"
-	"my-gotools/go_push/logic"
+	"my-gotools/45.工具库-消息推送服务示例/gateway"
+	"my-gotools/45.工具库-消息推送服务示例/logic"
 	"os"
 	"os/signal"
 	"syscall"

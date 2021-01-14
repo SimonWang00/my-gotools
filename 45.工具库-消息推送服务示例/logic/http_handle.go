@@ -2,7 +2,7 @@ package logic
 
 import (
 	"fmt"
-	"my-gotools/go_push/gateway"
+	"my-gotools/45.工具库-消息推送服务示例/gateway"
 	"net/http"
 	"strconv"
 )
