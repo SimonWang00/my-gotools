@@ -1,7 +1,7 @@
 package handler
 
 import (
-	"micro_agent/model/user"
+	"my-gotools/53.工具库-micro微服务实践示例/model/user"
 	"sync"
 )
 var (

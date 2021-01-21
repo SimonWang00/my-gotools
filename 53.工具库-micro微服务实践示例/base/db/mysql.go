@@ -3,7 +3,7 @@ package db
 import (
 	"fmt"
 	"github.com/go-xorm/xorm"
-	"micro_agent/base/config"
+	"my-gotools/53.工具库-micro微服务实践示例/base/config"
 )
 
 func initMysql()  {

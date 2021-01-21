@@ -1,9 +1,9 @@
 package base
 
 import (
-	"micro_agent/base/config"
-	"micro_agent/base/db"
-	"micro_agent/base/tool"
+	"my-gotools/53.工具库-micro微服务实践示例/base/config"
+	"my-gotools/53.工具库-micro微服务实践示例/base/db"
+	"my-gotools/53.工具库-micro微服务实践示例/base/tool"
 )
 
 func Init(path string) {
