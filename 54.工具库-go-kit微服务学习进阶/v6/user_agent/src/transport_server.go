@@ -2,11 +2,11 @@ package src
 
 import (
 	"context"
-	grpctransport "github.com/54.工具库-go-kit微服务学习进阶/kit/transport/grpc"
+	grpctransport "github.com/go-kit/kit/transport/grpc"
 	"go.uber.org/zap"
 	"google.golang.org/grpc/metadata"
-	"learning_tools/go-kit/v6/user_agent/pb"
-	"learning_tools/go-kit/v6/utils"
+	"my-gotools/54.工具库-go-kit微服务学习进阶/v6/user_agent/pb"
+	"my-gotools/54.工具库-go-kit微服务学习进阶/v6/utils"
 )
 
 type grpcServer struct {

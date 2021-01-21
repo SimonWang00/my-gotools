@@ -1,15 +1,15 @@
 package main
 
 import (
-	grpctransport "github.com/54.工具库-go-kit微服务学习进阶/kit/transport/grpc"
+	grpctransport "github.com/go-kit/kit/transport/grpc"
 	"go.uber.org/zap"
 	"golang.org/x/time/rate"
 	"google.golang.org/grpc"
-	"learning_tools/go-kit/v5/utils"
-	"learning_tools/go-kit/v5/v5_user/pb"
-	"learning_tools/go-kit/v5/v5_user/v5_endpoint"
-	"learning_tools/go-kit/v5/v5_user/v5_service"
-	"learning_tools/go-kit/v5/v5_user/v5_transport"
+	"my-gotools/54.工具库-go-kit微服务学习进阶/v5/utils"
+	"my-gotools/54.工具库-go-kit微服务学习进阶/v5/v5_user/pb"
+	"my-gotools/54.工具库-go-kit微服务学习进阶/v5/v5_user/v5_endpoint"
+	"my-gotools/54.工具库-go-kit微服务学习进阶/v5/v5_user/v5_service"
+	"my-gotools/54.工具库-go-kit微服务学习进阶/v5/v5_user/v5_transport"
 	"net"
 	"os"
 )

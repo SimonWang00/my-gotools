@@ -6,8 +6,8 @@ import (
 	"github.com/go-kit/kit/metrics"
 	"github.com/opentracing/opentracing-go"
 	"go.uber.org/zap"
-	"learning_tools/go-kit/v11/utils"
 	"math/rand"
+	"my-gotools/54.工具库-go-kit微服务学习进阶/v11/utils"
 	"time"
 )
 

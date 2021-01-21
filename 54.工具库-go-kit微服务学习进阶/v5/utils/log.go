@@ -2,7 +2,7 @@ package utils
 
 import (
 	"go.uber.org/zap"
-	"learning_tools/all_packaged_library/logtool"
+	"my-gotools/54.工具库-go-kit微服务学习进阶/logtool"
 )
 
 var logger *zap.Logger

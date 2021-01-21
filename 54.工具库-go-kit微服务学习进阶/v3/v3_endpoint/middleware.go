@@ -6,8 +6,8 @@ import (
 	"fmt"
 	"github.com/go-kit/kit/endpoint"
 	"go.uber.org/zap"
-	"learning_tools/go-kit/v3/utils"
-	"learning_tools/go-kit/v3/v3_service"
+	"my-gotools/54.工具库-go-kit微服务学习进阶/v3/utils"
+	"my-gotools/54.工具库-go-kit微服务学习进阶/v3/v3_service"
 	"time"
 )
 

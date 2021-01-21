@@ -5,7 +5,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"github.com/go-kit/kit/endpoint"
-	httptransport "github.com/54.工具库-go-kit微服务学习进阶/kit/transport/http"
+	httptransport "github.com/go-kit/kit/transport/http"
 	"my-gotools/54.工具库-go-kit微服务学习进阶/v1/v1_endpoint"
 	"my-gotools/54.工具库-go-kit微服务学习进阶/v1/v1_service"
 	"net/http"

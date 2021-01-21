@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 	"go.uber.org/zap"
-	"learning_tools/go-kit/v5/v5_user/pb"
+	"my-gotools/54.工具库-go-kit微服务学习进阶/v5/v5_user/pb"
 )
 
 const ContextReqUUid = "req_uuid"

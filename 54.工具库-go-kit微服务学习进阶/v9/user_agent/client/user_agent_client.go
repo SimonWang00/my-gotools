@@ -7,7 +7,7 @@ import (
 	"github.com/go-kit/kit/sd"
 	"github.com/go-kit/kit/sd/etcdv3"
 	"github.com/go-kit/kit/sd/lb"
-	grpctransport "github.com/54.工具库-go-kit微服务学习进阶/kit/transport/grpc"
+	grpctransport "github.com/go-kit/kit/transport/grpc"
 	grpcmiddleware "github.com/grpc-ecosystem/go-grpc-middleware"
 	grpc_zap "github.com/grpc-ecosystem/go-grpc-middleware/logging/zap"
 	grpc_opentracing "github.com/grpc-ecosystem/go-grpc-middleware/tracing/opentracing"
@@ -16,9 +16,9 @@ import (
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/metadata"
 	"io"
-	"learning_tools/go-kit/v9/user_agent/pb"
-	"learning_tools/go-kit/v9/user_agent/src"
-	"learning_tools/go-kit/v9/utils"
+	"my-gotools/54.工具库-go-kit微服务学习进阶/v9/user_agent/pb"
+	"my-gotools/54.工具库-go-kit微服务学习进阶/v9/user_agent/src"
+	"my-gotools/54.工具库-go-kit微服务学习进阶/v9/utils"
 	"time"
 )
 

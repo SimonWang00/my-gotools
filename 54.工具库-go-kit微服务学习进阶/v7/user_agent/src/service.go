@@ -5,8 +5,8 @@ import (
 	"errors"
 	"github.com/go-kit/kit/metrics"
 	"go.uber.org/zap"
-	"learning_tools/go-kit/v7/user_agent/pb"
-	"learning_tools/go-kit/v7/utils"
+	"my-gotools/54.工具库-go-kit微服务学习进阶/v7/user_agent/pb"
+	"my-gotools/54.工具库-go-kit微服务学习进阶/v7/utils"
 	"math/rand"
 	"time"
 )

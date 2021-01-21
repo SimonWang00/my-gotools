@@ -6,9 +6,9 @@ import (
 	"github.com/afex/hystrix-go/hystrix"
 	"github.com/go-kit/kit/log"
 	"go.uber.org/zap"
-	"learning_tools/all_packaged_library/logtool"
-	"learning_tools/go-kit/v11/user_agent/src"
-	"learning_tools/go-kit/v11/utils"
+	"my-gotools/54.工具库-go-kit微服务学习进阶/logtool"
+	"my-gotools/54.工具库-go-kit微服务学习进阶/v11/user_agent/src"
+	"my-gotools/54.工具库-go-kit微服务学习进阶/v11/utils"
 	"net/http"
 	"os"
 )

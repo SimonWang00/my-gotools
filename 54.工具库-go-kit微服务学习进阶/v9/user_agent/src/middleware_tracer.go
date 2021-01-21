@@ -4,7 +4,7 @@ import (
 	"context"
 	"github.com/opentracing/opentracing-go"
 	"github.com/opentracing/opentracing-go/ext"
-	"learning_tools/go-kit/v9/user_agent/pb"
+	"my-gotools/54.工具库-go-kit微服务学习进阶/v9/user_agent/pb"
 )
 
 type tracerMiddlewareServer struct {

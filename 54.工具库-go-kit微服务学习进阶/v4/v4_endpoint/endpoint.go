@@ -6,7 +6,7 @@ import (
 	"go.uber.org/ratelimit"
 	"go.uber.org/zap"
 	"golang.org/x/time/rate"
-	"learning_tools/go-kit/v4/v4_service"
+	"my-gotools/54.工具库-go-kit微服务学习进阶/v4/v4_service"
 )
 
 type EndPointServer struct {

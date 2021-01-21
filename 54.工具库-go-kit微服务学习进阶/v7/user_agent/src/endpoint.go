@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"github.com/go-kit/kit/endpoint"
 	"golang.org/x/time/rate"
-	"learning_tools/go-kit/v7/user_agent/pb"
+	"my-gotools/54.工具库-go-kit微服务学习进阶/v7/user_agent/pb"
 )
 
 type EndPointServer struct {

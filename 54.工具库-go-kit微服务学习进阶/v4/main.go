@@ -3,10 +3,10 @@ package main
 import (
 	"go.uber.org/ratelimit"
 	"golang.org/x/time/rate"
-	"learning_tools/go-kit/v4/utils"
-	"learning_tools/go-kit/v4/v4_endpoint"
-	"learning_tools/go-kit/v4/v4_service"
-	"learning_tools/go-kit/v4/v4_transport"
+	"my-gotools/54.工具库-go-kit微服务学习进阶/v4/utils"
+	"my-gotools/54.工具库-go-kit微服务学习进阶/v4/v4_endpoint"
+	"my-gotools/54.工具库-go-kit微服务学习进阶/v4/v4_service"
+	"my-gotools/54.工具库-go-kit微服务学习进阶/v4/v4_transport"
 	"net/http"
 )
 
