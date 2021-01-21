@@ -3,9 +3,9 @@ package main
 import (
 	"github.com/golang/protobuf/proto"
 	"io/ioutil"
+	"my-gotools/todo/grpc/protoc-gen-hw/plugin/hw"
 	"os"
 	"protoc-gen-hw/generator"
-	"protoc-gen-hw/plugin/hw"
 )
 
 func main() {

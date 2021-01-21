@@ -1,15 +1,15 @@
 package main
 
 import (
-	"testing"
-	"google.golang.org/grpc"
-	"log"
-	"learning_tools/grpc/bidirectional_streaming_rpc/proto"
-	"golang.org/x/net/context"
-	"io"
-	"fmt"
 	"bufio"
+	"fmt"
+	"golang.org/x/net/context"
+	"google.golang.org/grpc"
+	"io"
+	"log"
+	"my-gotools/todo/grpc/bidirectional_streaming_rpc/proto"
 	"os"
+	"testing"
 )
 
 func Test(t *testing.T) {
@@ -25,19 +25,19 @@ func Test(t *testing.T) {
 		log.Panic(err)
 	}
 
-	go func() {
-		/*fmt.Println("请输入消息......")
-		reader := bufio.NewReader(os.Stdin)
-		for {
-			data, err := reader.ReadString('\n')
-			if err != nil {
-				return
-			}*/
-			if err := stream.Send(&proto.Request{Input: "聊天"}); err != nil {
-				return
-			}
-		/*}*/
-	}()
+	//go func() {
+	//	fmt.Println("请输入消息......")
+	//	reader := bufio.NewReader(os.Stdin)
+	//	for {
+	//		data, err := reader.ReadString('\n')
+	//		if err != nil {
+	//			return
+	//		}
+	//		if err := stream.Send(&proto.Request{Input: "聊天"}); err != nil {
+	//			return
+	//		}
+	//	/*}*/
+	//}()
 
 	for {
 		response, err := stream.Recv()

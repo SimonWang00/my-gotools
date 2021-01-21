@@ -8,6 +8,7 @@ message Request {
 message Response {
     string output = 1;
 }
+
 service ChatService {
     rpc Chat (stream Request) returns (stream Response) {
     }
