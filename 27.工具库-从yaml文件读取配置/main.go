@@ -59,7 +59,7 @@ func newDBConfig() *mysqlConfig {
 	easyconfig.SetDefault("DB.HOST", "127.0.0.1")
 	easyconfig.SetDefault("DB.PORT", 3306)
 	easyconfig.SetDefault("DB.DATABASE", easyconfig.GetString("APP.NAME"))
-	easyconfig.SetDefault("DB.USERNAME", "gin")
+	easyconfig.SetDefault("DB.USERNAME", "43.工具库-gin常用组件总结")
 	easyconfig.SetDefault("DB.PASSWORD", "")
 
 	username := easyconfig.GetString("DB.USERNAME")

@@ -14,7 +14,7 @@ import (
 // DB gorm
 var (
 	db *gorm.DB
-	Url string = "gin.blog_debug"
+	Url string = "127.0.0.1:3306"
 	Connection string = "mysql"
 	isDebug bool = true
 )

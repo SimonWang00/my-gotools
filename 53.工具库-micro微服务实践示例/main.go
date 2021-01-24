@@ -1,0 +1,47 @@
+package main
+
+import (
+	"flag"
+	"github.com/micro/cli"
+	"github.com/micro/go-micro"
+	"github.com/micro/go-micro/registry"
+	"github.com/micro/go-plugins/registry/etcdv3"
+	"my-gotools/53.工具库-micro微服务实践示例/base"
+	"my-gotools/53.工具库-micro微服务实践示例/base/config"
+	"my-gotools/53.工具库-micro微服务实践示例/base/tool"
+	"my-gotools/53.工具库-micro微服务实践示例/handler"
+	"my-gotools/53.工具库-micro微服务实践示例/model"
+	user_agent "my-gotools/53.工具库-micro微服务实践示例/proto/user"
+	"strings"
+	"time"
+)
+
+var conf = flag.String("conf", "/home/ghost/go/src/53.工具库-micro微服务实践示例/conf", "conf path")
+
+func main() {
+	base.Init(*conf)
+	registry := etcdv3.NewRegistry(func(options *registry.Options) {
+		options.Timeout = time.Second * 5
+		options.Addrs = strings.Split(config.GetServerConfig().GetEtcdAddr(), ",")
+	})
+	service := micro.NewService(
+		micro.Name(config.GetServerConfig().GetServerName()),
+		micro.Version("latest"),
+		micro.Registry(registry),
+		micro.RegisterTTL(time.Second*30),
+		micro.RegisterInterval(time.Second*15),
+	)
+	service.Init(
+		micro.Action(func(c *cli.Context) {
+			model.Init()
+			handler.Init()
+		}),
+	)
+	// 注册服务
+	tool.GetLogger().Info("start service " + config.GetServerConfig().GetServerName() + " success")
+	_ = user_agent.RegisterUserHandler(service.Server(), handler.GetService())
+	// 启动服务
+	if err := service.Run(); err != nil {
+		panic(err)
+	}
+}
