@@ -44,6 +44,7 @@ func NewSelector(options SelectorOptions) (Selector, error) {
 	return s, nil
 }
 
+// 随机选取一个节点
 func (s *selectorServer) Next() (Node, error) {
 	if len(s.node) == 0 {
 		return Node{}, fmt.Errorf("no node found on the %s", s.options.name)
@@ -52,6 +53,7 @@ func (s *selectorServer) Next() (Node, error) {
 	return s.node[i], nil
 }
 
+// watch 一个key
 func (s *selectorServer) Watch() {
 	res, err := s.cli.Get(context.TODO(), s.GetKey(), clientv3.WithPrefix(), clientv3.WithSerializable())
 	if err != nil {
@@ -66,20 +68,21 @@ func (s *selectorServer) Watch() {
 		}
 		s.node = append(s.node, node)
 	}
+	// 监听
 	ch := s.cli.Watch(context.TODO(), prefix, clientv3.WithPrefix())
 	for {
 		select {
 		case c := <-ch:
 			for _, e := range c.Events {
 				switch e.Type {
-				case clientv3.EventTypePut:
+				case clientv3.EventTypePut:		//put事件
 					node, err := s.GetVal(e.Kv.Value)
 					if err != nil {
 						log.Printf("[EventTypePut] err : %s", err.Error())
 						continue
 					}
 					s.AddNode(node)
-				case clientv3.EventTypeDelete:
+				case clientv3.EventTypeDelete:	//delete事件
 					keyArray := strings.Split(string(e.Kv.Key), "/")
 					if len(keyArray) <= 0 {
 						log.Printf("[EventTypeDelete] key Split err : %s", err.Error())
@@ -97,6 +100,7 @@ func (s *selectorServer) Watch() {
 	}
 }
 
+// 根据id删除节点
 func (s *selectorServer) DelNode(id uint32) {
 	var node []Node
 	for _, v := range s.node {
@@ -107,6 +111,7 @@ func (s *selectorServer) DelNode(id uint32) {
 	s.node = node
 }
 
+// 增加节点
 func (s *selectorServer) AddNode(node Node) {
 	var exist bool
 	for _, v := range s.node {

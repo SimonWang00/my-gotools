@@ -19,8 +19,8 @@ func main () {
 		Name: "svc.info",
 		Ttl:  60,
 		Config: clientv3.Config{
-			Endpoints:   []string{"http://localhost:2379/"},
-			DialTimeout: 10 * time.Second},
+			Endpoints:   []string{"http://127.0.0.1:2379/"},
+			DialTimeout: 5 * time.Second},
 	}
 	for i := 1; i <= 3; i++ {
 		// 创建注册
@@ -42,7 +42,6 @@ func main () {
 				r.UnRegistry()
 			}()
 		}
-
 	}
-	time.Sleep(time.Hour * 5)
+	time.Sleep(time.Second * 5)
 }

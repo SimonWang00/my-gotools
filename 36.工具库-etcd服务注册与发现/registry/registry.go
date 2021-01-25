@@ -19,7 +19,7 @@ type Registry interface {
 	UnRegistry()
 }
 
-
+// 注册对象
 type registryServer struct {
 	cli        *clientv3.Client
 	stop       chan bool
@@ -37,12 +37,14 @@ type Node struct {
 	Addr string `json:"addr"`
 }
 
+// 注册配置
 type Options struct {
 	Name   string
 	Ttl    int64
 	Config clientv3.Config
 }
 
+// 初始化
 func NewRegistry(options Options) (Registry, error) {
 	cli, err := clientv3.New(options.Config)
 	if err != nil {
@@ -87,6 +89,7 @@ func (s *registryServer) RegistryNode(put PutNode) error {
 	return nil
 }
 
+// 取消注册
 func (s *registryServer) UnRegistry() {
 	s.stop <- true
 }
@@ -122,18 +125,20 @@ func (s *registryServer) KeepAlive() error {
 	}
 }
 
-
+// 获取key
 func (s *registryServer) GetKey(node Node) string {
 	key := fmt.Sprintf("%s%s/%d", prefix, s.options.Name, s.HashKey(node.Addr))
 	fmt.Println(key)
 	return key
 }
 
+// 获取value
 func (s *registryServer) GetVal(node Node) (string, error) {
 	data, err := json.Marshal(&node)
 	return string(data), err
 }
 
+// 检查key是否存在
 func (e *registryServer) HashKey(addr string) uint32 {
 	hid := crc32.ChecksumIEEE([]byte(addr))
 	fmt.Println("crc32.ChecksumIEEE([]byte(addr)):",crc32.ChecksumIEEE([]byte(addr)))
