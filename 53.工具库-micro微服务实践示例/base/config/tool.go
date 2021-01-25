@@ -25,18 +25,23 @@ func (m defaultLogToolConfig) GetDevelopment() bool {
 		return false
 	}
 }
+
 func (m defaultLogToolConfig) GetLogFileDir() string {
 	return m.LogFileDir
 }
+
 func (m defaultLogToolConfig) GetAppName() string {
 	return m.AppName
 }
+
 func (m defaultLogToolConfig) GetMaxSize() int {
 	return m.MaxSize
 }
+
 func (m defaultLogToolConfig) GetMaxBackups() int {
 	return m.MaxBackups
 }
+
 func (m defaultLogToolConfig) GetMaxAge() int {
 	return m.MaxAge
 }

@@ -1,10 +1,10 @@
 package config
 
 import (
+	"github.com/go-ini/ini"
 	"path/filepath"
 	"sync"
 )
-import "github.com/go-ini/ini"
 
 var (
 	mysqlConfig defaultMysqlConfig

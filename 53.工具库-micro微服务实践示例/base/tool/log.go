@@ -3,7 +3,8 @@ package tool
 import (
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"
-	"gopkg.in/natefinch/lumberjack"
+	//"gopkg.in/natefinch/lumberjack"
+	"github.com/natefinch/lumberjack"
 	"os"
 	"path/filepath"
 	"sync"
