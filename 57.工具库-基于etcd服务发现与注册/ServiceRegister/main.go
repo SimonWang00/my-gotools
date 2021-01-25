@@ -97,8 +97,10 @@ func main() {
 	}
 	//监听续租相应chan
 	go ser.ListenLeaseRespChan()
-	select {
-	case <-time.After(20 * time.Second):
-		ser.Close()
+	for{
+		select {
+		case <-time.After(20 * time.Second):
+			ser.Close()
+		}
 	}
 }

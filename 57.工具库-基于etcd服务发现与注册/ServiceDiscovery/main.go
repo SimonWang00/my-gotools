@@ -5,11 +5,9 @@ package main
 //Describe: describle your function
 //Date  : 2021/1/15
 
-
 import (
 	"context"
 	"go.etcd.io/etcd/clientv3"
-	mvccpb2 "go.etcd.io/etcd/mvcc/mvccpb"
 	"log"
 	"sync"
 	"time"
@@ -62,9 +60,9 @@ func (s *ServiceDiscovery) watcher(prefix string) {
 	for wresp := range rch {
 		for _, ev := range wresp.Events {
 			switch ev.Type {
-			case mvccpb2.PUT: //修改或者新增
+			case clientv3.EventTypePut: //修改或者新增
 				s.SetServiceList(string(ev.Kv.Key), string(ev.Kv.Value))
-			case mvccpb2.DELETE: //删除
+			case clientv3.EventTypeDelete: //删除
 				s.DelServiceList(string(ev.Kv.Key))
 			}
 		}
