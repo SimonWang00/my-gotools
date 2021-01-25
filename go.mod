@@ -22,6 +22,7 @@ require (
 	github.com/gomodule/redigo v1.8.3
 	github.com/gonuts/binary v0.2.0 // indirect
 	github.com/google/uuid v1.1.5
+	github.com/googleapis/gnostic v0.5.3 // indirect
 	github.com/gorilla/websocket v1.4.2
 	github.com/grpc-ecosystem/go-grpc-middleware v1.2.2
 	github.com/hpcloud/tail v1.0.0
@@ -63,6 +64,10 @@ require (
 	gopkg.in/go-oauth2/redis.v3 v3.2.1
 	gopkg.in/mgo.v2 v2.0.0-20190816093944-a6b53ec6cb22
 	gopkg.in/oauth2.v3 v3.12.0
+	k8s.io/api v0.20.2 // indirect
+	k8s.io/client-go v11.0.0+incompatible // indirect
+	k8s.io/klog v1.0.0 // indirect
+	k8s.io/utils v0.0.0-20210111153108-fddb29f9d009 // indirect
 )
 
 replace google.golang.org/grpc => google.golang.org/grpc v1.26.0
