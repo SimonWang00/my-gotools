@@ -63,6 +63,7 @@ require (
 	google.golang.org/protobuf v1.25.0
 	gopkg.in/go-oauth2/redis.v3 v3.2.1
 	gopkg.in/mgo.v2 v2.0.0-20190816093944-a6b53ec6cb22
+	gopkg.in/natefinch/lumberjack.v2 v2.0.0 // indirect
 	gopkg.in/oauth2.v3 v3.12.0
 	k8s.io/api v0.20.2 // indirect
 	k8s.io/client-go v11.0.0+incompatible // indirect
