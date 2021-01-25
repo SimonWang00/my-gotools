@@ -1,4 +1,4 @@
-# micro 微服务实践,可能是写的好的哪一种
+# micro 微服务实践,可能是写的好的一种
 ### micro_agent (micro微服务)
     1: base 基础方法
     2: conf 配置文件

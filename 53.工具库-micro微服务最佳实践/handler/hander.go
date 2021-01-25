@@ -1,7 +1,7 @@
 package handler
 
 import (
-	"my-gotools/53.工具库-micro微服务实践示例/model/user"
+	"my-gotools/53.工具库-micro微服务最佳实践/model/user"
 	"sync"
 )
 var (
@@ -22,6 +22,7 @@ func Init() {
 	m.Lock()
 	defer m.Unlock()
 	server =new(Service)
+	// 获取服务实例
 	server.userServer, err = user.GetService()
 	checkErr(err)
 

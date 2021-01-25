@@ -1,5 +1,7 @@
 syntax = "proto3";
 package user_agent;
+
+
 service User {
     rpc RpcUserInfo (ReqMsg) returns (ResMsg) {
     }

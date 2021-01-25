@@ -2,9 +2,10 @@ package user
 
 import (
 	"fmt"
-	user_agent "my-gotools/53.工具库-micro微服务实践示例/proto/user"
+	user_agent "my-gotools/53.工具库-micro微服务最佳实践/proto/user"
 	"sync"
 )
+
 var (
 	s *service
 	m sync.RWMutex
