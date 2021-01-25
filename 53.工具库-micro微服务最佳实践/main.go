@@ -40,6 +40,7 @@ func main() {
 		}),
 	)
 	tool.GetLogger().Info("start service " + config.GetServerConfig().GetServerName() + " success")
+	// handle RegisterUserHandler
 	_ = user_agent.RegisterUserHandler(service.Server(), handler.GetService())
 	// 启动服务
 	if err := service.Run(); err != nil {
