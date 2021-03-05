@@ -23,7 +23,7 @@ func NewUserListener() *UserListener {
 }
 
 func main() {
-	p, err := rocketmq.NewTransactionProducer(NewUserListener(), producer.WithNsResovler(primitive.NewPassthroughResolver([]string{"172.13.3.160:9876"})),
+	p, err := rocketmq.NewTransactionProducer(NewUserListener(), producer.WithNsResovler(primitive.NewPassthroughResolver([]string{"127.0.0.1:9876"})),
 		producer.WithRetry(1))
 	if err != nil {
 		panic(err)
